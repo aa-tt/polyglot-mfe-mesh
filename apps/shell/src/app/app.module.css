@@ -1,0 +1,55 @@
+.shell-container {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: 100vh;
+  background-color: #fcfcfc;
+}
+
+.shell-header {
+  border-bottom: 2px solid #6e56cf;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+}
+
+.shell-header h1 {
+  margin: 0;
+  color: #1a1523;
+  font-size: 32px;
+}
+
+.subtitle {
+  color: #69647a;
+  margin-top: 8px;
+}
+
+.mesh-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.mfe-slot {
+  position: relative;
+  padding: 30px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.badge.react-18 { background: #e1f5fe; color: #01579b; }
+.badge.react-legacy { background: #fff3e0; color: #e65100; }
+
