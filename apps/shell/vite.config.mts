@@ -23,8 +23,8 @@ export default defineConfig(() => ({
     federation({
       name: 'shell',
       remotes: {
-        profile_mfe: 'http://127.0.0.1:4201/assets/remoteEntry.js',
-        analytics_mfe: 'http://127.0.0.1:4202/assets/remoteEntry.js',
+        profile_mfe: 'http://localhost:4201/assets/remoteEntry.js',
+        analytics_mfe: 'http://localhost:4202/assets/remoteEntry.js',
       },
       shared: {
         react: { singleton: true },

@@ -18,7 +18,6 @@ export interface MfeEvent<T = any> {
 }
 
 class EventBus {
-  private static instance: EventBus;
   private bus$ = new Subject<MfeEvent>();
 
   private constructor() {
@@ -26,12 +25,10 @@ class EventBus {
   }
 
   public static getInstance(): EventBus {
-    if (!EventBus.instance) {
-      EventBus.instance = new EventBus();
-      // Attach to window to bridge across different bundles/React versions
-      (window as any).__MFE_EVENT_BUS__ = EventBus.instance;
+    if (!(window as any).__MFE_EVENT_BUS__) {
+      (window as any).__MFE_EVENT_BUS__ = new EventBus();
     }
-    return (window as any).__MFE_EVENT_BUS__ || EventBus.instance;
+    return (window as any).__MFE_EVENT_BUS__;
   }
 
   /**
